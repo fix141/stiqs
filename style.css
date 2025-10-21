@@ -1,0 +1,38 @@
+/* style.css */
+
+/* Ini adalah setup dasar untuk animasi marquee.
+ Kita bikin animasi bernama "marquee" yang gerak 100% ke kiri.
+*/
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Kita terapkan animasi itu ke .marquee-content.
+ 'animation: marquee 40s linear infinite;' artinya:
+ - marquee: nama animasi
+ - 40s: durasi (makin gede makin lambat, 40 detik)
+ - linear: kecepatannya konstan
+ - infinite: ngulang terus-terusan
+*/
+.marquee-content {
+    display: flex;
+    gap: 1.5rem; /* ini = gap-6 di Tailwind */
+    animation: marquee 40s linear infinite;
+    flex-shrink: 0; /* penting biar ga nyusut */
+}
+
+.marquee {
+    overflow: hidden; /* Sembunyikan yg keluar layar */
+    width: 100%;
+    display: flex;
+}
+
+/* Ini buat placeholder item di marquee */
+.marquee-item {
+    flex-shrink: 0; /* Penting! Biar itemnya ga jadi kecil */
+    width: 18rem; /* ini = w-72 di Tailwind */
+    height: 18rem; /* ini = h-72 di Tailwind */
+    background-color: #e5e7eb; /* ini = bg-gray-200 */
+    border-radius: 0.5rem; /* ini = rounded-lg */
+}

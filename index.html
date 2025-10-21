@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STIQS - Stik Bawang Naik Kelas</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+      // Konfigurasi font Poppins buat Tailwind
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              'sans': ['Poppins', 'sans-serif']
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="font-sans text-gray-800">
+
+    <header id="navbar" class="fixed top-0 left-0 w-full p-6 flex justify-between items-center z-50 text-white transition-all duration-300">
+        <a href="#" class="text-3xl font-extrabold">STIQS.</a>
+        
+        <nav class="hidden md:flex gap-8 font-semibold">
+            <a href="#story" class="hover:text-yellow-400 transition-colors">Tentang Kami</a>
+            <a href="#product-section" class="hover:text-yellow-400 transition-colors">Rasa</a>
+            <a href="#cta" class="bg-yellow-400 text-black px-4 py-2 rounded-full hover:bg-yellow-300 transition-all">Beli Sekarang</a>
+        </nav>
+        
+        <div class="md:hidden">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </div>
+    </header>
+
+    <section id="hero" class="h-screen flex items-center justify-center text-center text-white bg-gray-900">
+        <div data-aos="fade-up">
+            <h1 class="text-5xl md:text-7xl font-extrabold leading-tight">Stik Bawang.<br>Naik Kelas.</h1>
+            <p class="text-xl md:text-2xl mt-4 font-light">Tekstur <span class="font-semibold text-yellow-400">crunchy</span>, <span class="font-semibold text-yellow-400">zero</span> minyak. "Stay Crunchy, Stay Chill."</p>
+            <a href="#product-section" class="inline-block bg-yellow-400 text-black text-lg font-bold px-8 py-3 rounded-full mt-10 hover:bg-yellow-300 hover:scale-105 transition-all">
+                Lihat Koleksi Rasa
+            </a>
+        </div>
+    </section>
+
+    <section id="story" class="py-24 container mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+                <span class="text-yellow-500 font-semibold">The Glow-Up</span>
+                <h2 class="text-4xl font-bold mt-2 mb-6">Dari Warung ke <span class="text-yellow-500">Premium</span>.</h2>
+                <div class="text-lg text-gray-600 leading-relaxed">
+                    <p>
+                        STIQS lahir dari ide sederhana: gimana caranya bisa ngemil tanpa ribet dan tetap elegan.
+                    </p>
+                    <br>
+                    <p>Kami percaya kalau setiap orang berhak punya snack yang enak, praktis, dan nggak bikin tangan kotor apalagi pas lagi sibuk nugas atau kerja.</p>
+                    <br>                
+                    <p>Dengan konsep premium minimalis, kami menghadirkan STIQS sebagai “smart snack for smart minds” renyah, bersih, dan siap nemenin kamu di setiap momen produktif.</p>
+                    <br>
+                    <p>Stay Crunchy, Stay Chill.</p>                    
+                </div>
+            </div>
+            <div data-aos="fade-left" data-aos-delay="200">
+                <img src="images/stikbawang.jpeg" alt="Stik Bawang Renyah" 
+                     class="h-96 w-full object-cover rounded-lg shadow-xl">
+            </div>
+        </div>
+    </section>
+
+    <section id="product-section" class="py-24 bg-gray-50 transition-all duration-500">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-12" data-aos="fade-up">Pilih Energi Kamu.</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="product-card bg-white rounded-xl shadow-lg p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 cursor-pointer" 
+                     data-bg-color="bg-yellow-50" data-aos="fade-up" data-aos-delay="0">
+                    <img src="images/original.jpeg" alt="Kemasan STIQS rasa Garlic Burst" 
+                         class="h-64 w-full object-cover rounded-lg mb-6">
+                    <h3 class="text-3xl font-bold">Garlic Burst</h3>
+                    <p class="text-gray-500 mt-2">Rasa gurih otentik bawang yang "pecah" di setiap gigitan.</p>
+                </div>
+
+                <div class="product-card bg-white rounded-xl shadow-lg p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 cursor-pointer" 
+                     data-bg-color="bg-red-50" data-aos="fade-up" data-aos-delay="200">
+                    <img src="images/spicy.jpeg" alt="Kemasan STIQS rasa Garlic Burst" 
+                         class="h-64 w-full object-cover rounded-lg mb-6">
+                    <h3 class="text-3xl font-bold">Fiery Chilli</h3>
+                    <p class="text-gray-500 mt-2">Sensasi pedas membara yang bikin kamu melek lagi.</p>
+                </div>
+                
+                <div class="product-card bg-white rounded-xl shadow-lg p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 cursor-pointer" 
+                     data-bg-color="bg-green-50" data-aos="fade-up" data-aos-delay="400">
+                    <img src="images/seaweed.jpeg" alt="Kemasan STIQS rasa Garlic Burst" 
+                         class="h-64 w-full object-cover rounded-lg mb-6">
+                    <h3 class="text-3xl font-bold">Shio Nori</h3>
+                    <p class="text-gray-500 mt-2">Gurih premium rumput laut dan garam laut asli Jepang.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="community" class="py-24 overflow-hidden">
+        <h2 class="text-4xl font-bold text-center mb-12">#STIKSNaikKelas</h2>
+        
+        <div class="marquee">
+            <div class="marquee-content">
+                <img src="images/original.jpeg" alt="STIQS community post 1" class="marquee-item object-cover h-72 w-72 rounded-lg shadow-md">
+                <img src="images/spicy.jpeg" alt="STIQS community post 2" class="marquee-item object-cover h-72 w-72 rounded-lg shadow-md">
+                <img src="images/seaweed.jpeg" alt="STIQS community post 3" class="marquee-item object-cover h-72 w-72 rounded-lg shadow-md">
+                <img src="images/original.jpeg" alt="STIQS community post 1" class="marquee-item object-cover h-72 w-72 rounded-lg shadow-md">
+                <img src="images/spicy.jpeg" alt="STIQS community post 2" class="marquee-item object-cover h-72 w-72 rounded-lg shadow-md">
+                <img src="images/seaweed.jpeg" alt="STIQS community post 3" class="marquee-item object-cover h-72 w-72 rounded-lg shadow-md">
+                <img src="images/original.jpeg" alt="STIQS community post 1" class="marquee-item object-cover h-72 w-72 rounded-lg shadow-md">
+                <img src="images/spicy.jpeg" alt="STIQS community post 2" class="marquee-item object-cover h-72 w-72 rounded-lg shadow-md">
+                <img src="images/seaweed.jpeg" alt="STIQS community post 3" class="marquee-item object-cover h-72 w-72 rounded-lg shadow-md">
+                <img src="images/original.jpeg" alt="STIQS community post 1" class="marquee-item object-cover h-72 w-72 rounded-lg shadow-md">
+                <img src="images/spicy.jpeg" alt="STIQS community post 2" class="marquee-item object-cover h-72 w-72 rounded-lg shadow-md">
+                <img src="images/seaweed.jpeg" alt="STIQS community post 3" class="marquee-item object-cover h-72 w-72 rounded-lg shadow-md">
+                <img src="images/original.jpeg" alt="STIQS community post 1" class="marquee-item object-cover h-72 w-72 rounded-lg shadow-md">
+                <img src="images/spicy.jpeg" alt="STIQS community post 2" class="marquee-item object-cover h-72 w-72 rounded-lg shadow-md">
+                <img src="images/seaweed.jpeg" alt="STIQS community post 3" class="marquee-item object-cover h-72 w-72 rounded-lg shadow-md">
+            </div>
+        </div>
+    </section>
+
+    <section id="cta" class="py-24 bg-gray-900 text-white text-center">
+        <div class="container mx-auto px-6" data-aos="fade-up">
+            <h2 class="text-4xl font-bold">Siap Naik Kelas?</h2>
+            <p class="text-lg text-gray-300 mt-4 mb-8">Dapetin STIQS di marketplace favorit kamu.</p>
+            
+            <div class="flex flex-col md:flex-row justify-center gap-6">
+                <a href="https://forms.gle/FqSCJPGb5P8a1AvZ9" class="bg-orange-500 text-white font-bold text-lg px-10 py-4 rounded-full flex items-center justify-center gap-3 hover:bg-orange-400 transition-all hover:scale-105">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19.99 10.5h-5.48V5.01c0-.28-.22-.5-.5-.5s-.5.22-.5.5v5.49H8.01c-.28 0-.5.22-.5.5s.22.5.5.5h5.49v5.48c0 .28.22.5.5.5s.5-.22.5-.5v-5.48h5.48c.28 0 .5-.22.5-.5s-.22-.5-.5-.5zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+                    Pesan lewat GForm
+                </a>
+                <a href="https://wasap.at/o9Iehk" class="bg-green-600 text-white font-bold text-lg px-10 py-4 rounded-full flex items-center justify-center gap-3 hover:bg-green-500 transition-all hover:scale-105">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 14.5c-2.48 0-4.5-2.02-4.5-4.5s2.02-4.5 4.5-4.5 4.5 2.02 4.5 4.5-2.02 4.5-4.5 4.5z"/></svg>
+                    Pesan lewat WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center">
+        <p class="text-gray-500">&copy; 2025 STIQS.</p>
+    </footer>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
