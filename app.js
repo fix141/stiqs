@@ -61,3 +61,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
+// ===== Efek 3D Hero Section (HAPUS BLOK INI) =====
+const heroSection = document.getElementById('hero');
+const heroContent = document.getElementById('hero-content');
+
+heroSection.addEventListener('mousemove', (e) => {
+    // ... (semua isi di dalemnya) ...
+});
+
+heroSection.addEventListener('mouseleave', () => {
+    // ... (semua isi di dalemnya) ...
+});
+// ===============================================
+
+// ===== FAQ Accordion =====
+document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+        const answer = button.nextElementSibling;
+        const arrow = button.querySelector('.faq-arrow');
+
+        // Toggle (buka/tutup) jawaban
+        answer.classList.toggle('hidden');
+
+        // Animasi panah
+        arrow.classList.toggle('rotate-180');
+    });
+});
