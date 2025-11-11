@@ -5,27 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Biodata Team</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @keyframes glitch {
+        0%,
+        100% {
+          transform: translate(0);
+        }
+        20% {
+          transform: translate(-2px, 2px);
+        }
+        40% {
+          transform: translate(2px, -2px);
+        }
+        60% {
+          transform: translate(-1px, 1px);
+        }
+        80% {
+          transform: translate(1px, -1px);
+        }
+      }
+      .glitch {
+        animation: glitch 0.1s infinite;
+        color: #ff3333;
+        text-shadow: 2px 2px #00ffea, -2px -2px #ff00c8;
+      }
+      .chaos {
+        background: black !important;
+        color: lime !important;
+      }
+      .spinny {
+        animation: spin 1.5s linear infinite;
+      }
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      .bw-glitch {
+        filter: grayscale(1) contrast(2) brightness(0.5);
+        animation: glitch 0.2s infinite;
+      }
+    </style>
   </head>
   <body
-    class="bg-gray-100 min-h-screen flex flex-col items-center justify-center"
+    class="bg-gray-100 min-h-screen flex flex-col items-center justify-center transition-all duration-700"
+    id="body"
   >
-    <h1 class="text-3xl font-bold text-gray-800 mb-10">Our Amazing Team</h1>
+    <h1 id="title" class="text-3xl font-bold text-gray-800 mb-10">
+      Our Amazing Team
+    </h1>
 
     <div
+      id="teamGrid"
       class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-6 max-w-6xl"
     >
-      <!-- Card 1 -->
       <a
-        href="https://www.instagram.com/ddats_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-        target="_blank"
-        rel="noopener noreferrer"
-        class="block bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300"
+        href="#"
+        class="card block bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300"
       >
-        <img
-          src="images/dedat.png"
-          alt="Foto 1"
-          class="w-full h-56 object-cover"
-        />
+        <img src="images/dedat.png" class="member w-full h-56 object-cover" />
         <div class="p-5 text-center">
           <h2 class="text-xl font-semibold text-gray-800">
             Sannatthariq Annizemi Achmed Deedat
@@ -34,38 +75,24 @@
         </div>
       </a>
 
-      <!-- Card 2 -->
-      <a
-        href="https://www.instagram.com/fix.141?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-        target="_blank"
-        rel="noopener noreferrer"
-        class="block bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300"
+      <div
+        id="fikriCard"
+        class="card block bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300 cursor-pointer"
       >
-        <img
-          src="images/fikri.jpg"
-          alt="Foto 2"
-          class="w-full h-56 object-cover"
-        />
+        <img src="images/fikri.jpg" class="member w-full h-56 object-cover" />
         <div class="p-5 text-center">
           <h2 class="text-xl font-semibold text-gray-800">
             Abdul Fikri Husaini
           </h2>
           <p class="text-gray-500 italic">"Kang Molor"</p>
         </div>
-      </a>
+      </div>
 
-      <!-- Card 3 -->
       <a
-        href="https://www.instagram.com/happiness_try/?utm_source=ig_web_button_share_sheet"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="block bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300"
+        href="#"
+        class="card block bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300"
       >
-        <img
-          src="images/hana.png"
-          alt="Foto 3"
-          class="w-full h-56 object-cover"
-        />
+        <img src="images/hana.png" class="member w-full h-56 object-cover" />
         <div class="p-5 text-center">
           <h2 class="text-xl font-semibold text-gray-800">
             Hanna Tri Yuniawati
@@ -74,18 +101,11 @@
         </div>
       </a>
 
-      <!-- Card 4 -->
       <a
-        href="https://www.instagram.com/luvieanaa?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-        target="_blank"
-        rel="noopener noreferrer"
-        class="block bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300"
+        href="#"
+        class="card block bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300"
       >
-        <img
-          src="images/fia.png"
-          alt="Foto 4"
-          class="w-full h-56 object-cover"
-        />
+        <img src="images/fia.png" class="member w-full h-56 object-cover" />
         <div class="p-5 text-center">
           <h2 class="text-xl font-semibold text-gray-800">
             Ludfiana Putri Damirahadi
@@ -95,8 +115,120 @@
       </a>
     </div>
 
-    <footer class="mt-10 text-gray-500 text-sm mb-5"><a href="index.html">© 2025 Team STIQS Landing Page</a>
-      
+    <footer class="mt-10 text-gray-500 text-sm mb-5">
+      <a href="index.html">© 2025 Team STIQS Landing Page</a>
     </footer>
+
+    <audio
+      id="glitchSound"
+      preload="auto"
+      src="https://cdn.pixabay.com/download/audio/2022/03/22/audio_1415b1cdbb.mp3?filename=glitch-fx-122332.mp3"
+    ></audio>
+
+    <script>
+      document.body.addEventListener(
+        "click",
+        () => {
+          const sound = document.getElementById("glitchSound");
+          sound.play().catch(() => {}); // supaya browser ngebuka izin audio
+          sound.pause();
+          sound.currentTime = 0;
+        },
+        { once: true }
+      );
+
+      const fikriCard = document.getElementById("fikriCard");
+      const body = document.getElementById("body");
+      const title = document.getElementById("title");
+      const teamGrid = document.getElementById("teamGrid");
+      const glitchSound = document.getElementById("glitchSound");
+      const members = document.querySelectorAll(".member");
+
+      let clickCount = 0;
+      let chaosActive = false;
+
+      fikriCard.addEventListener("click", () => {
+        clickCount++;
+        if (clickCount === 3 && !chaosActive) startLivingPage();
+      });
+
+      function startLivingPage() {
+        chaosActive = true;
+        glitchSound.play();
+        title.textContent = "⚠️ Kang Molor Has Awakened ⚠️";
+        title.classList.add("glitch");
+        body.classList.add("chaos");
+
+        const msg = document.createElement("p");
+        msg.textContent =
+          "Kamu telah membangunkan Kang Molor... halaman ini sekarang hidup.";
+        msg.className = "text-xl text-center mt-8 animate-pulse";
+        body.appendChild(msg);
+
+        // Efek awal cepat
+        setTimeout(() => {
+          document.body.style.filter = "invert(1) hue-rotate(180deg)";
+          title.textContent = "STIQS Reality Leak Detected…";
+          title.classList.add("glitch");
+          aftermath(); // kasih satu efek awal
+        }, 400);
+
+        // Setelah efek awal, mulai chaos permanen
+        setTimeout(() => {
+          document.body.style.filter = "";
+          msg.remove();
+          startEndlessChaos();
+        }, 2000);
+      }
+
+      /* === Chaos loop setelah aktif === */
+      function startEndlessChaos() {
+        setInterval(() => {
+          const event = Math.floor(Math.random() * 4);
+          switch (event) {
+            case 0:
+              title.textContent = "Wake up. This isn’t real.";
+              title.classList.add("glitch");
+              setTimeout(() => title.classList.remove("glitch"), 2000);
+              break;
+            case 1:
+              teamGrid.style.transform = "rotate(180deg)";
+              setTimeout(() => (teamGrid.style.transform = ""), 2000);
+              break;
+            case 2:
+              document
+                .querySelectorAll("img")
+                .forEach((img) => img.classList.add("spinny"));
+              setTimeout(
+                () =>
+                  document
+                    .querySelectorAll("img")
+                    .forEach((img) => img.classList.remove("spinny")),
+                2000
+              );
+              break;
+            case 3:
+              aftermath();
+              break;
+          }
+        }, 4000); // tiap 4 detik ada kejadian aneh baru
+      }
+
+      /* === Aftermath efek foto glitch === */
+      function aftermath() {
+        const victim = members[Math.floor(Math.random() * members.length)];
+        victim.classList.add("bw-glitch");
+        const overlay = document.createElement("div");
+        overlay.textContent = "He was here.";
+        overlay.className =
+          "absolute text-center text-red-600 text-lg font-bold w-full mt-24";
+        victim.parentElement.style.position = "relative";
+        victim.parentElement.appendChild(overlay);
+        setTimeout(() => {
+          victim.classList.remove("bw-glitch");
+          overlay.remove();
+        }, 2500);
+      }
+    </script>
   </body>
 </html>
