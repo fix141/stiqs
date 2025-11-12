@@ -31,11 +31,76 @@
   <body class="font-sans text-gray-800">
     <header
       id="navbar"
-      class="fixed top-0 left-0 w-full p-6 flex justify-between items-center z-50 text-white transition-all duration-300"
+      class="fixed top-0 left-0 w-full bg-slate-900 text-white py-4 px-8 z-[9999] shadow-md"
     >
-      <a href="#" class="text-3xl font-extrabold">STIQS.</a>
+      <div class="container mx-auto flex items-center justify-between relative">
+        <!-- LOGO -->
+        <a href="#" class="text-3xl font-extrabold tracking-tight">STIQS.</a>
 
-      <nav class="hidden md:flex gap-8 font-semibold items-center">
+        <!-- NAV MENU DI TENGAH -->
+        <nav
+          class="absolute left-1/2 transform -translate-x-1/2 hidden md:flex items-center gap-10"
+        >
+          <a href="#story" class="hover:text-yellow-400 transition-colors"
+            >Tentang Kami</a
+          >
+          <a
+            href="#product-section"
+            class="hover:text-yellow-400 transition-colors"
+            >Rasa</a
+          >
+          <a href="#quiz" class="hover:text-yellow-400 transition-colors"
+            >Tebak Rasa</a
+          >
+        </nav>
+
+        <!-- TOMBOL BELI SEKARANG DI KANAN -->
+        <a
+          href="#order"
+          class="hidden md:inline-block bg-yellow-400 text-black px-5 py-2.5 rounded-full font-semibold hover:bg-yellow-300 transition-all"
+        >
+          Beli Sekarang
+        </a>
+
+        <!-- TOMBOL BURGER (MOBILE) -->
+        <button id="menu-btn" class="md:hidden focus:outline-none">
+          <svg
+            class="w-7 h-7"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- MENU MOBILE -->
+      <nav
+        id="menu"
+        class="fixed top-0 right-0 h-full w-64 bg-slate-900 text-white flex flex-col items-start p-8 space-y-6 transform translate-x-full transition-transform duration-300 md:hidden"
+      >
+        <button id="close-menu" class="self-end">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
+          </svg>
+        </button>
+
         <a href="#story" class="hover:text-yellow-400 transition-colors"
           >Tentang Kami</a
         >
@@ -44,29 +109,16 @@
           class="hover:text-yellow-400 transition-colors"
           >Rasa</a
         >
+        <a href="#quiz" class="hover:text-yellow-400 transition-colors"
+          >Tebak Rasa</a
+        >
         <a
           href="#order"
           class="bg-yellow-400 text-black px-4 py-2 rounded-full hover:bg-yellow-300 transition-all"
-          >Beli Sekarang</a
         >
+          Beli Sekarang
+        </a>
       </nav>
-
-      <div class="md:hidden">
-        <svg
-          class="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 6h16M4 12h16m-7 6h7"
-          ></path>
-        </svg>
-      </div>
     </header>
 
     <section
@@ -211,7 +263,7 @@
             />
             <h3 class="text-3xl font-bold">Shio Nori</h3>
             <p class="text-gray-500 mt-2">
-              Gurih premium rumput laut dan garam laut asli Jepang.
+              Gurih premium rumput laut dan garam laut asli.
             </p>
           </div>
         </div>
@@ -816,11 +868,11 @@
                     type="checkbox"
                     id="garlic"
                     data-name="Garlic Burst"
-                    data-price="12000"
+                    data-price="10000"
                     class="h-5 w-5 text-yellow-500"
                   />
                   <label for="garlic" class="font-medium"
-                    >Garlic Burst - Rp 12.000</label
+                    >Garlic Burst - Rp 10.000</label
                   >
                 </div>
                 <input
@@ -840,11 +892,11 @@
                     type="checkbox"
                     id="chilli"
                     data-name="Fiery Chilli"
-                    data-price="12000"
+                    data-price="11000"
                     class="h-5 w-5 text-yellow-500"
                   />
                   <label for="chilli" class="font-medium"
-                    >Fiery Chilli - Rp 12.000</label
+                    >Fiery Chilli - Rp 11.000</label
                   >
                 </div>
                 <input
@@ -864,11 +916,11 @@
                     type="checkbox"
                     id="shio"
                     data-name="Shio Nori"
-                    data-price="12000"
+                    data-price="11000"
                     class="h-5 w-5 text-yellow-500"
                   />
                   <label for="shio" class="font-medium"
-                    >Shio Nori - Rp 12.000</label
+                    >Shio Nori - Rp 11.000</label
                   >
                 </div>
                 <input
@@ -924,7 +976,7 @@
               id="notes"
               rows="3"
               class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-yellow-400 focus:outline-none"
-              placeholder="Contoh: Tolong tambah saus ekstra, dll."
+              placeholder="Contoh: Tolong taruh di pagar dan beritahu jika sudah sampai, dll."
             ></textarea>
           </div>
 
@@ -943,6 +995,22 @@
         </form>
       </div>
     </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuBtn = document.getElementById("menu-btn");
+        const closeBtn = document.getElementById("close-menu");
+        const menu = document.getElementById("menu");
+
+        menuBtn.addEventListener("click", () => {
+          menu.classList.remove("translate-x-full");
+        });
+
+        closeBtn.addEventListener("click", () => {
+          menu.classList.add("translate-x-full");
+        });
+      });
+    </script>
 
     <script>
       const checkboxes = document.querySelectorAll('input[type="checkbox"]');
