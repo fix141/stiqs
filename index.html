@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>STIQS - Stik Bawang Naik Kelas</title>
@@ -10,39 +11,31 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" />
 
     <script>
-      // Konfigurasi font Poppins buat Tailwind
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ["Poppins", "sans-serif"],
+        // Konfigurasi font Poppins buat Tailwind
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ["Poppins", "sans-serif"],
+                    },
+                },
             },
-          },
-        },
-      };
+        };
     </script>
-  </head>
-  <body class="font-sans text-gray-800">
-    <header
-      id="navbar"
-      class="fixed top-0 left-0 w-full bg-slate-900 text-white py-4 px-8 z-[9999] shadow-md"
-    >
-      <div class="container mx-auto flex items-center justify-between relative">
-        <!-- LOGO -->
-        <a href="#" class="text-3xl font-extrabold tracking-tight">STIQS.</a>
+</head>
 
-        <!-- NAV MENU DI TENGAH -->
-        <nav
-          class="absolute left-1/2 transform -translate-x-1/2 hidden md:flex items-center gap-10"
-        >
-          <a href="#story" class="hover:text-yellow-400 transition-colors"
-            >Tentang Kami</a
+<body class="font-sans text-gray-800">
+    <header id="navbar" class="fixed top-0 left-0 w-full bg-slate-900 text-white py-4 px-8 z-[9999] shadow-md">
+        <div class="container mx-auto flex items-center justify-between relative">
+            <!-- LOGO -->
+            <a href="#" class="text-3xl font-extrabold tracking-tight">STIQS.</a>
+
+            <!-- NAV MENU DI TENGAH -->
+            <nav class="absolute left-1/2 transform -translate-x-1/2 hidden md:flex items-center gap-10">
+                <a href="#story" class="hover:text-yellow-400 transition-colors">Tentang Kami</a
           >
           <a
             href="#product-section"
@@ -56,14 +49,14 @@
 
         <!-- TOMBOL BELI SEKARANG DI KANAN -->
         <a
-          href="#order"
+          href="#order-buttons"
           class="hidden md:inline-block bg-yellow-400 text-black px-5 py-2.5 rounded-full font-semibold hover:bg-yellow-300 transition-all"
         >
           Beli Sekarang
         </a>
 
-        <!-- TOMBOL BURGER (MOBILE) -->
-        <button id="menu-btn" class="md:hidden focus:outline-none">
+                <!-- TOMBOL BURGER (MOBILE) -->
+                <button id="menu-btn" class="md:hidden focus:outline-none">
           <svg
             class="w-7 h-7"
             fill="none"
@@ -78,14 +71,11 @@
             ></path>
           </svg>
         </button>
-      </div>
+        </div>
 
-      <!-- MENU MOBILE -->
-      <nav
-        id="menu"
-        class="fixed top-0 right-0 h-full w-64 bg-slate-900 text-white flex flex-col items-start p-8 space-y-6 transform translate-x-full transition-transform duration-300 md:hidden"
-      >
-        <button id="close-menu" class="self-end">
+        <!-- MENU MOBILE -->
+        <nav id="menu" class="fixed top-0 right-0 h-full w-64 bg-slate-900 text-white flex flex-col items-start p-8 space-y-6 transform translate-x-full transition-transform duration-300 md:hidden">
+            <button id="close-menu" class="self-end">
           <svg
             class="w-6 h-6"
             fill="none"
@@ -101,8 +91,7 @@
           </svg>
         </button>
 
-        <a href="#story" class="hover:text-yellow-400 transition-colors"
-          >Tentang Kami</a
+            <a href="#story" class="hover:text-yellow-400 transition-colors">Tentang Kami</a
         >
         <a
           href="#product-section"
@@ -113,45 +102,32 @@
           >Tebak Rasa</a
         >
         <a
-          href="#order"
+          href="#order-buttons"
           class="bg-yellow-400 text-black px-4 py-2 rounded-full hover:bg-yellow-300 transition-all"
         >
           Beli Sekarang
         </a>
-      </nav>
+        </nav>
     </header>
 
-    <section
-      id="hero"
-      class="relative h-screen flex items-center justify-center text-center text-white bg-slate-900 overflow-hidden"
-    >
-      <div data-aos="fade-up">
-        <h1 class="text-5xl md:text-7xl font-extrabold leading-tight">
-          Stik Bawang.<br />Naik Kelas.
-        </h1>
+    <section id="hero" class="relative h-screen flex items-center justify-center text-center text-white bg-slate-900 overflow-hidden">
+        <div data-aos="fade-up">
+            <h1 class="text-5xl md:text-7xl font-extrabold leading-tight">
+                Stik Bawang.<br />Naik Kelas.
+            </h1>
 
-        <p class="text-xl md:text-2xl mt-4 font-light">
-          Tekstur <span class="font-semibold text-yellow-400">crunchy</span>
-          <span class="font-semibold text-yellow-400">zero</span> minyak. "Stay
-          Crunchy, Stay Chill."
-        </p>
+            <p class="text-xl md:text-2xl mt-4 font-light">
+                Tekstur <span class="font-semibold text-yellow-400">crunchy</span>
+                <span class="font-semibold text-yellow-400">zero</span> minyak. "Stay Crunchy, Stay Chill."
+            </p>
 
-        <a
-          href="#product-section"
-          class="inline-block bg-yellow-400 text-black text-lg font-bold px-8 py-3 rounded-full mt-10 hover:bg-yellow-300 hover:scale-105 transition-all"
-        >
+            <a href="#product-section" class="inline-block bg-yellow-400 text-black text-lg font-bold px-8 py-3 rounded-full mt-10 hover:bg-yellow-300 hover:scale-105 transition-all">
           Lihat Koleksi Rasa
         </a>
-      </div>
+        </div>
 
-      <a href="#story" class="absolute bottom-10 animate-bounce">
-        <svg
-          class="w-8 h-8 text-yellow-400"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        <a href="#story" class="absolute bottom-10 animate-bounce">
+            <svg class="w-8 h-8 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path
             stroke-linecap="round"
             stroke-linejoin="round"
@@ -159,580 +135,472 @@
             d="M19 9l-7 7-7-7"
           ></path>
         </svg>
-      </a>
+        </a>
     </section>
 
     <section id="story" class="py-24 container mx-auto px-6">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div data-aos="fade-right">
-          <span class="text-yellow-500 font-semibold">The Glow-Up</span>
-          <h2 class="text-4xl font-bold mt-2 mb-6">
-            Dari Warung ke <span class="text-yellow-500">Premium</span>.
-          </h2>
-          <div class="text-lg text-gray-600 leading-relaxed">
-            <p>
-              STIQS lahir dari ide sederhana: gimana caranya bisa ngemil tanpa
-              ribet dan tetap elegan.
-            </p>
-            <br />
-            <p>
-              Kami percaya kalau setiap orang berhak punya snack yang enak,
-              praktis, dan nggak bikin tangan kotor apalagi pas lagi sibuk nugas
-              atau kerja.
-            </p>
-            <br />
-            <p>
-              Dengan konsep premium minimalis, kami menghadirkan STIQS sebagai
-              “smart snack for smart minds” renyah, bersih, dan siap nemenin
-              kamu di setiap momen produktif.
-            </p>
-            <br />
-            <p><b>Stay Crunchy, Stay Chill.</b></p>
-          </div>
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+                <span class="text-yellow-500 font-semibold">The Glow-Up</span>
+                <h2 class="text-4xl font-bold mt-2 mb-6">
+                    Dari Warung ke <span class="text-yellow-500">Premium</span>.
+                </h2>
+                <div class="text-lg text-gray-600 leading-relaxed">
+                    <p>
+                        STIQS lahir dari ide sederhana: gimana caranya bisa ngemil tanpa ribet dan tetap elegan.
+                    </p>
+                    <br />
+                    <p>
+                        Kami percaya kalau setiap orang berhak punya snack yang enak, praktis, dan nggak bikin tangan kotor apalagi pas lagi sibuk nugas atau kerja.
+                    </p>
+                    <br />
+                    <p>
+                        Dengan konsep premium minimalis, kami menghadirkan STIQS sebagai “smart snack for smart minds” renyah, bersih, dan siap nemenin kamu di setiap momen produktif.
+                    </p>
+                    <br />
+                    <p><b>Stay Crunchy, Stay Chill.</b></p>
+                </div>
+            </div>
+            <div data-aos="fade-left" data-aos-delay="200">
+                <div class="rounded-3xl overflow-hidden shadow-xl">
+                    <img src="images/garlic_burst.jpg" alt="Stik Bawang Renyah" style="aspect-ratio: 1 / 1; width: 100%; max-height: 600px" class="rounded-3xl" />
+                </div>
+            </div>
         </div>
-        <div data-aos="fade-left" data-aos-delay="200">
-          <div class="rounded-3xl overflow-hidden shadow-xl">
-            <img
-              src="images/garlic_burst.jpg"
-              alt="Stik Bawang Renyah"
-              style="aspect-ratio: 1 / 1; width: 100%; max-height: 600px"
-              class="rounded-3xl"
-            />
-          </div>
-        </div>
-      </div>
     </section>
 
-    <section
-      id="product-section"
-      class="py-24 bg-gray-50 transition-all duration-500"
-    >
-      <div class="container mx-auto px-6 text-center">
-        <h2 class="text-4xl font-bold mb-12" data-aos="fade-up">
-          Pilih Energi Kamu.
-        </h2>
+    <section id="product-section" class="py-24 bg-gray-50 transition-all duration-500">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-12" data-aos="fade-up">
+                Pilih Energi Kamu.
+            </h2>
 
-        <div class="grid md:grid-cols-3 gap-8">
-          <div
-            class="product-card bg-white rounded-xl shadow-lg p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 cursor-pointer"
-            data-bg-color="bg-yellow-50"
-            data-aos="fade-up"
-            data-aos-delay="0"
-          >
-            <img
-              src="images/garlic_burst.jpg"
-              alt="Kemasan STIQS rasa Garlic Burst"
-              style="aspect-ratio: 4/3; width: 100%; max-height: 420px"
-              class="w-full object-contain rounded-lg mb-6 bg-white p-3"
-            />
-            <h3 class="text-3xl font-bold">Garlic Burst</h3>
-            <p class="text-gray-500 mt-2">
-              Rasa gurih otentik bawang yang "pecah" di setiap gigitan.
-            </p>
-          </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="product-card bg-white rounded-xl shadow-lg p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 cursor-pointer" data-bg-color="bg-yellow-50" data-aos="fade-up" data-aos-delay="0">
+                    <img src="images/garlic_burst.jpg" alt="Kemasan STIQS rasa Garlic Burst" style="aspect-ratio: 4/3; width: 100%; max-height: 420px" class="w-full object-contain rounded-lg mb-6 bg-white p-3" />
+                    <h3 class="text-3xl font-bold">Garlic Burst</h3>
+                    <p class="text-gray-500 mt-2">
+                        Rasa gurih otentik bawang yang "pecah" di setiap gigitan.
+                    </p>
+                </div>
 
-          <div
-            class="product-card bg-white rounded-xl shadow-lg p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 cursor-pointer"
-            data-bg-color="bg-red-50"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <img
-              src="images/fiery_chilli.png"
-              alt="Kemasan STIQS rasa Garlic Burst"
-              style="aspect-ratio: 4/3; width: 100%; max-height: 420px"
-              class="w-full object-contain rounded-lg mb-6 bg-white p-3"
-            />
-            <h3 class="text-3xl font-bold">Fiery Chilli</h3>
-            <p class="text-gray-500 mt-2">
-              Sensasi pedas membara yang bikin kamu melek lagi.
-            </p>
-          </div>
+                <div class="product-card bg-white rounded-xl shadow-lg p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 cursor-pointer" data-bg-color="bg-red-50" data-aos="fade-up" data-aos-delay="200">
+                    <img src="images/fiery_chilli.png" alt="Kemasan STIQS rasa Garlic Burst" style="aspect-ratio: 4/3; width: 100%; max-height: 420px" class="w-full object-contain rounded-lg mb-6 bg-white p-3" />
+                    <h3 class="text-3xl font-bold">Fiery Chilli</h3>
+                    <p class="text-gray-500 mt-2">
+                        Sensasi pedas membara yang bikin kamu melek lagi.
+                    </p>
+                </div>
 
-          <div
-            class="product-card bg-white rounded-xl shadow-lg p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 cursor-pointer"
-            data-bg-color="bg-green-50"
-            data-aos="fade-up"
-            data-aos-delay="400"
-          >
-            <img
-              src="images/shio_nori.png"
-              alt="Kemasan STIQS rasa Garlic Burst"
-              style="aspect-ratio: 4/3; width: 100%; max-height: 420px"
-              class="w-full object-contain rounded-lg mb-6 bg-white p-3"
-            />
-            <h3 class="text-3xl font-bold">Shio Nori</h3>
-            <p class="text-gray-500 mt-2">
-              Gurih premium rumput laut dan garam laut asli.
-            </p>
-          </div>
+                <div class="product-card bg-white rounded-xl shadow-lg p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 cursor-pointer" data-bg-color="bg-green-50" data-aos="fade-up" data-aos-delay="400">
+                    <img src="images/shio_nori.png" alt="Kemasan STIQS rasa Garlic Burst" style="aspect-ratio: 4/3; width: 100%; max-height: 420px" class="w-full object-contain rounded-lg mb-6 bg-white p-3" />
+                    <h3 class="text-3xl font-bold">Shio Nori</h3>
+                    <p class="text-gray-500 mt-2">
+                        Gurih premium rumput laut dan garam laut asli.
+                    </p>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
     <!-- QUIZ SECTION -->
     <section id="quiz" class="py-24 bg-white">
-      <div class="container mx-auto px-6 max-w-2xl text-center">
-        <h2 class="text-4xl font-bold mb-6 text-gray-800">Tebak Rasa Kamu</h2>
-        <p class="text-gray-600 mb-10">
-          Jawab beberapa pertanyaan sederhana ini dan temukan varian STIQS yang
-          paling cocok buat kepribadian kamu!
-        </p>
+        <div class="container mx-auto px-6 max-w-2xl text-center">
+            <h2 class="text-4xl font-bold mb-6 text-gray-800">Tebak Rasa Kamu</h2>
+            <p class="text-gray-600 mb-10">
+                Jawab beberapa pertanyaan sederhana ini dan temukan varian STIQS yang paling cocok buat kepribadian kamu!
+            </p>
 
-        <!-- Quiz Container -->
-        <div id="quiz-container" class="bg-gray-50 p-8 rounded-2xl shadow-lg">
-          <!-- Step 1 -->
-          <div class="quiz-step" id="step-1">
-            <h3 class="text-xl font-semibold mb-6">
-              Kamu lebih suka suasana seperti apa?
-            </h3>
-            <div class="flex flex-col gap-4">
-              <button class="quiz-btn" data-score="garlic">
+            <!-- Quiz Container -->
+            <div id="quiz-container" class="bg-gray-50 p-8 rounded-2xl shadow-lg">
+                <!-- Step 1 -->
+                <div class="quiz-step" id="step-1">
+                    <h3 class="text-xl font-semibold mb-6">
+                        Kamu lebih suka suasana seperti apa?
+                    </h3>
+                    <div class="flex flex-col gap-4">
+                        <button class="quiz-btn" data-score="garlic">
                 Tenang & santai
               </button>
-              <button class="quiz-btn" data-score="chilli">Rame & seru</button>
-              <button class="quiz-btn" data-score="shio">Natural & adem</button>
-            </div>
-          </div>
+                        <button class="quiz-btn" data-score="chilli">Rame & seru</button>
+                        <button class="quiz-btn" data-score="shio">Natural & adem</button>
+                    </div>
+                </div>
 
-          <!-- Step 2 -->
-          <div class="quiz-step hidden" id="step-2">
-            <h3 class="text-xl font-semibold mb-6">
-              Kalau lagi ngemil, kamu lebih suka rasa...
-            </h3>
-            <div class="flex flex-col gap-4">
-              <button class="quiz-btn" data-score="garlic">
+                <!-- Step 2 -->
+                <div class="quiz-step hidden" id="step-2">
+                    <h3 class="text-xl font-semibold mb-6">
+                        Kalau lagi ngemil, kamu lebih suka rasa...
+                    </h3>
+                    <div class="flex flex-col gap-4">
+                        <button class="quiz-btn" data-score="garlic">
                 Gurih yang nagih
               </button>
-              <button class="quiz-btn" data-score="chilli">
+                        <button class="quiz-btn" data-score="chilli">
                 Pedas yang nyengat
               </button>
-              <button class="quiz-btn" data-score="shio">
+                        <button class="quiz-btn" data-score="shio">
                 Ringan tapi berkelas
               </button>
-            </div>
-          </div>
+                    </div>
+                </div>
 
-          <!-- Step 3 -->
-          <div class="quiz-step hidden" id="step-3">
-            <h3 class="text-xl font-semibold mb-6">
-              Teman ideal ngemil kamu siapa?
-            </h3>
-            <div class="flex flex-col gap-4">
-              <button class="quiz-btn" data-score="garlic">Drama Korea</button>
-              <button class="quiz-btn" data-score="chilli">
+                <!-- Step 3 -->
+                <div class="quiz-step hidden" id="step-3">
+                    <h3 class="text-xl font-semibold mb-6">
+                        Teman ideal ngemil kamu siapa?
+                    </h3>
+                    <div class="flex flex-col gap-4">
+                        <button class="quiz-btn" data-score="garlic">Drama Korea</button>
+                        <button class="quiz-btn" data-score="chilli">
                 Game kompetitif
               </button>
-              <button class="quiz-btn" data-score="shio">Musik</button>
-            </div>
-          </div>
+                        <button class="quiz-btn" data-score="shio">Musik</button>
+                    </div>
+                </div>
 
-          <!-- Result -->
-          <div class="quiz-step hidden" id="result">
-            <h3 class="text-2xl font-bold mb-6" id="result-title"></h3>
-            <img
-              id="result-img"
-              src=""
-              alt="Snack Result"
-              class="w-56 mx-auto rounded-2xl shadow-md mb-6"
-            />
-            <p id="result-desc" class="text-gray-600 mb-8"></p>
-            <a
-              href="#order"
-              class="bg-yellow-400 text-black font-semibold px-6 py-3 rounded-full hover:bg-yellow-300 transition-all"
-            >
+                <!-- Result -->
+                <div class="quiz-step hidden" id="result">
+                    <h3 class="text-2xl font-bold mb-6" id="result-title"></h3>
+                    <img id="result-img" src="" alt="Snack Result" class="w-56 mx-auto rounded-2xl shadow-md mb-6" />
+                    <p id="result-desc" class="text-gray-600 mb-8"></p>
+                    <a href="#order-buttons" class="bg-yellow-400 text-black font-semibold px-6 py-3 rounded-full hover:bg-yellow-300 transition-all">
               Pesan Sekarang
             </a>
-          </div>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
     <script>
-      const steps = document.querySelectorAll(".quiz-step");
-      const buttons = document.querySelectorAll(".quiz-btn");
-      const resultTitle = document.getElementById("result-title");
-      const resultDesc = document.getElementById("result-desc");
-      const resultImg = document.getElementById("result-img");
+        const steps = document.querySelectorAll(".quiz-step");
+        const buttons = document.querySelectorAll(".quiz-btn");
+        const resultTitle = document.getElementById("result-title");
+        const resultDesc = document.getElementById("result-desc");
+        const resultImg = document.getElementById("result-img");
 
-      let scores = { garlic: 0, chilli: 0, shio: 0 };
-      let currentStep = 0;
-
-      buttons.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          const scoreType = btn.dataset.score;
-          scores[scoreType]++;
-
-          // next step
-          steps[currentStep].classList.add("hidden");
-          currentStep++;
-          if (currentStep < steps.length - 1) {
-            steps[currentStep].classList.remove("hidden");
-          } else {
-            showResult();
-          }
-        });
-      });
-
-      function showResult() {
-        const highest = Object.keys(scores).reduce((a, b) =>
-          scores[a] > scores[b] ? a : b
-        );
-        const result = {
-          garlic: {
-            title: "Kamu itu Garlic Burst 🧄",
-            desc: "Tenang, realistis, dan selalu jadi tempat curhat orang. Rasa gurih STIQS Garlic Burst emang paling cocok buat kamu!",
-            img: "images/garlic_burst.jpg",
-          },
-          chilli: {
-            title: "Kamu itu Fiery Chilli 🔥",
-            desc: "Penuh energi dan spontan! Kamu suka tantangan dan gak takut tampil beda — sama kayak rasa Fiery Chilli yang pedas membara!",
-            img: "images/fiery_chilli.png",
-          },
-          shio: {
-            title: "Kamu itu Shio Nori 🌿",
-            desc: "Kamu calm, berkelas, dan selalu tahu apa yang kamu mau. Rasa Shio Nori yang halus tapi berkarakter pas banget buat kamu.",
-            img: "images/shio_nori.png",
-          },
+        let scores = {
+            garlic: 0,
+            chilli: 0,
+            shio: 0
         };
+        let currentStep = 0;
 
-        steps[currentStep].classList.add("hidden");
-        document.getElementById("result").classList.remove("hidden");
-        resultTitle.textContent = result[highest].title;
-        resultDesc.textContent = result[highest].desc;
-        resultImg.src = result[highest].img;
-      }
+        buttons.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                const scoreType = btn.dataset.score;
+                scores[scoreType]++;
 
-      // style tombol quiz
-      document.querySelectorAll(".quiz-btn").forEach((btn) => {
-        btn.classList.add(
-          "bg-white",
-          "border",
-          "border-yellow-400",
-          "rounded-lg",
-          "py-3",
-          "hover:bg-yellow-100",
-          "transition-all"
-        );
-      });
+                // next step
+                steps[currentStep].classList.add("hidden");
+                currentStep++;
+                if (currentStep < steps.length - 1) {
+                    steps[currentStep].classList.remove("hidden");
+                } else {
+                    showResult();
+                }
+            });
+        });
+
+        function showResult() {
+            const highest = Object.keys(scores).reduce((a, b) =>
+                scores[a] > scores[b] ? a : b
+            );
+            const result = {
+                garlic: {
+                    title: "Kamu itu Garlic Burst 🧄",
+                    desc: "Tenang, realistis, dan selalu jadi tempat curhat orang. Rasa gurih STIQS Garlic Burst emang paling cocok buat kamu!",
+                    img: "images/garlic_burst.jpg",
+                },
+                chilli: {
+                    title: "Kamu itu Fiery Chilli 🔥",
+                    desc: "Penuh energi dan spontan! Kamu suka tantangan dan gak takut tampil beda — sama kayak rasa Fiery Chilli yang pedas membara!",
+                    img: "images/fiery_chilli.png",
+                },
+                shio: {
+                    title: "Kamu itu Shio Nori 🌿",
+                    desc: "Kamu calm, berkelas, dan selalu tahu apa yang kamu mau. Rasa Shio Nori yang halus tapi berkarakter pas banget buat kamu.",
+                    img: "images/shio_nori.png",
+                },
+            };
+
+            steps[currentStep].classList.add("hidden");
+            document.getElementById("result").classList.remove("hidden");
+            resultTitle.textContent = result[highest].title;
+            resultDesc.textContent = result[highest].desc;
+            resultImg.src = result[highest].img;
+        }
+
+        // style tombol quiz
+        document.querySelectorAll(".quiz-btn").forEach((btn) => {
+            btn.classList.add(
+                "bg-white",
+                "border",
+                "border-yellow-400",
+                "rounded-lg",
+                "py-3",
+                "hover:bg-yellow-100",
+                "transition-all"
+            );
+        });
     </script>
 
     <!-- MINI GAMES SECTION -->
     <section id="mini-games" class="py-24 bg-gray-50">
-      <div class="container mx-auto px-6 text-center">
-        <h2 class="text-4xl font-bold mb-4 text-gray-800">Main Bareng STIQS</h2>
-        <p class="text-gray-600 mb-10">
-          Santai bentar, cobain dua mini-game seru sambil ngemil STIQS!
-        </p>
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-4 text-gray-800">Main Bareng STIQS</h2>
+            <p class="text-gray-600 mb-10">
+                Santai bentar, cobain dua mini-game seru sambil ngemil STIQS!
+            </p>
 
-        <!-- Tabs -->
-        <div class="flex justify-center gap-4 mb-8">
-          <button class="tab-btn active" data-target="catcher">
+            <!-- Tabs -->
+            <div class="flex justify-center gap-4 mb-8">
+                <button class="tab-btn active" data-target="catcher">
             🎯 Snack Catcher
           </button>
-          <button class="tab-btn" data-target="memory">🧠 Snack Memory</button>
-        </div>
+                <button class="tab-btn" data-target="memory">🧠 Snack Memory</button>
+            </div>
 
-        <!-- Game 1: Snack Catcher -->
-        <div id="catcher" class="game-section">
-          <canvas
-            id="catcherCanvas"
-            width="300"
-            height="400"
-            class="mx-auto bg-white rounded-xl shadow-lg"
-          ></canvas>
-          <p class="text-gray-600 mt-4">
-            Tangkap stik bawang sebanyak mungkin dalam 15 detik!
-          </p>
-          <div id="score" class="text-2xl font-bold mt-4 text-yellow-600">
-            Skor: 0
-          </div>
-          <button
-            id="startCatcher"
-            class="mt-6 bg-yellow-400 px-6 py-3 rounded-full font-semibold hover:bg-yellow-300 transition-all"
-          >
+            <!-- Game 1: Snack Catcher -->
+            <div id="catcher" class="game-section">
+                <canvas id="catcherCanvas" width="300" height="400" class="mx-auto bg-white rounded-xl shadow-lg"></canvas>
+                <p class="text-gray-600 mt-4">
+                    Tangkap stik bawang sebanyak mungkin dalam 15 detik!
+                </p>
+                <div id="score" class="text-2xl font-bold mt-4 text-yellow-600">
+                    Skor: 0
+                </div>
+                <button id="startCatcher" class="mt-6 bg-yellow-400 px-6 py-3 rounded-full font-semibold hover:bg-yellow-300 transition-all">
             Mulai Game
           </button>
-        </div>
+            </div>
 
-        <!-- Game 2: Snack Memory -->
-        <div id="memory" class="game-section hidden">
-          <div
-            id="memory-grid"
-            class="grid grid-cols-3 gap-4 justify-center max-w-sm mx-auto place-items-center"
-          ></div>
-          <p class="text-gray-600 mt-4">
-            Cocokkan semua rasa STIQS sebelum waktu habis!
-          </p>
-          <button
-            id="restartMemory"
-            class="mt-6 bg-yellow-400 px-6 py-3 rounded-full font-semibold hover:bg-yellow-300 transition-all"
-          >
+            <!-- Game 2: Snack Memory -->
+            <div id="memory" class="game-section hidden">
+                <div id="memory-grid" class="grid grid-cols-3 gap-4 justify-center max-w-sm mx-auto place-items-center"></div>
+                <p class="text-gray-600 mt-4">
+                    Cocokkan semua rasa STIQS sebelum waktu habis!
+                </p>
+                <button id="restartMemory" class="mt-6 bg-yellow-400 px-6 py-3 rounded-full font-semibold hover:bg-yellow-300 transition-all">
             Main Lagi
           </button>
+            </div>
         </div>
-      </div>
     </section>
 
     <script>
-      /* === Tab Switching === */
-      const tabs = document.querySelectorAll(".tab-btn");
-      const sections = document.querySelectorAll(".game-section");
-      tabs.forEach((tab) => {
-        tab.addEventListener("click", () => {
-          tabs.forEach((t) =>
-            t.classList.remove("active", "bg-yellow-400", "text-black")
-          );
-          tab.classList.add("active", "bg-yellow-400", "text-black");
-          sections.forEach((s) => s.classList.add("hidden"));
-          document
-            .getElementById(tab.dataset.target)
-            .classList.remove("hidden");
-        });
-      });
-
-      /* === Snack Catcher === */
-      // Gambar stik bawang
-      const bowlImg = new Image();
-      bowlImg.src = "images/bowl.png";
-      // Load 3 varian stik bawang
-      const stickImages = [new Image(), new Image(), new Image()];
-      stickImages[0].src = "images/fiery_chilli_game.png"; // rasa pedas
-      stickImages[1].src = "images/garlic_burst_game.png"; // original
-      stickImages[2].src = "images/shio_nori_game.png"; // shio nori
-      const canvas = document.getElementById("catcherCanvas");
-      const ctx = canvas.getContext("2d");
-      const startBtn = document.getElementById("startCatcher");
-      const scoreDisplay = document.getElementById("score");
-      let catcher, sticks, score, gameActive, timer;
-
-      function startCatcherGame() {
-        catcher = { x: 130, y: 360, w: 120, h: 60 };
-        sticks = [];
-        score = 0;
-        gameActive = true;
-        scoreDisplay.textContent = "Skor: 0";
-        timer = 15;
-
-        const gameInterval = setInterval(() => {
-          if (!gameActive) {
-            clearInterval(gameInterval);
-            ctx.fillStyle = "#000";
-            ctx.font = "20px Poppins";
-            ctx.fillText("Waktu Habis!", 80, 200);
-            return;
-          }
-
-          ctx.clearRect(0, 0, canvas.width, canvas.height);
-          ctx.shadowColor = "rgba(0,0,0,0.2)";
-          ctx.shadowBlur = 10;
-
-          // Gambar mangkuk
-          ctx.drawImage(bowlImg, catcher.x - 25, catcher.y - 20, 90, 60);
-
-          if (Math.random() < 0.05)
-            sticks.push({
-              x: Math.random() * canvas.width,
-              y: 0,
-              rotation: Math.random() * Math.PI * 2,
-              img: stickImages[Math.floor(Math.random() * stickImages.length)],
+        /* === Tab Switching === */
+        const tabs = document.querySelectorAll(".tab-btn");
+        const sections = document.querySelectorAll(".game-section");
+        tabs.forEach((tab) => {
+            tab.addEventListener("click", () => {
+                tabs.forEach((t) =>
+                    t.classList.remove("active", "bg-yellow-400", "text-black")
+                );
+                tab.classList.add("active", "bg-yellow-400", "text-black");
+                sections.forEach((s) => s.classList.add("hidden"));
+                document
+                    .getElementById(tab.dataset.target)
+                    .classList.remove("hidden");
             });
+        });
 
-          ctx.shadowColor = "rgba(0,0,0,0.1)";
-          ctx.shadowBlur = 3;
+        /* === Snack Catcher === */
+        // Gambar stik bawang
+        const bowlImg = new Image();
+        bowlImg.src = "images/bowl.png";
+        // Load 3 varian stik bawang
+        const stickImages = [new Image(), new Image(), new Image()];
+        stickImages[0].src = "images/fiery_chilli_game.png"; // rasa pedas
+        stickImages[1].src = "images/garlic_burst_game.png"; // original
+        stickImages[2].src = "images/shio_nori_game.png"; // shio nori
+        const canvas = document.getElementById("catcherCanvas");
+        const ctx = canvas.getContext("2d");
+        const startBtn = document.getElementById("startCatcher");
+        const scoreDisplay = document.getElementById("score");
+        let catcher, sticks, score, gameActive, timer;
 
-          sticks.forEach((s, i) => {
-            s.y += 4;
+        function startCatcherGame() {
+            catcher = {
+                x: 130,
+                y: 360,
+                w: 120,
+                h: 60
+            };
+            sticks = [];
+            score = 0;
+            gameActive = true;
+            scoreDisplay.textContent = "Skor: 0";
+            timer = 15;
 
-            // Tambah rotasi acak biar lebih natural
-            if (!s.rotation) s.rotation = Math.random() * Math.PI * 2;
-            s.rotation += 0.03;
+            const gameInterval = setInterval(() => {
+                if (!gameActive) {
+                    clearInterval(gameInterval);
+                    ctx.fillStyle = "#000";
+                    ctx.font = "20px Poppins";
+                    ctx.fillText("Waktu Habis!", 80, 200);
+                    return;
+                }
 
-            ctx.save();
-            ctx.translate(s.x, s.y);
-            ctx.rotate(s.rotation);
-            ctx.scale(s.scale, s.scale);
-            ctx.drawImage(s.img, -40, -40, 50, 50); // ukuran mangkuk pas
-            ctx.restore();
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.shadowColor = "rgba(0,0,0,0.2)";
+                ctx.shadowBlur = 10;
 
-            // Deteksi tabrakan
-            if (
-              s.y + 20 >= catcher.y &&
-              s.x >= catcher.x - 30 &&
-              s.x <= catcher.x + catcher.w + 70
-            ) {
-              sticks.splice(i, 1);
-              score++;
-              scoreDisplay.textContent = "Skor: " + score;
-            }
-          });
-        }, 30);
+                // Gambar mangkuk
+                ctx.drawImage(bowlImg, catcher.x - 25, catcher.y - 20, 90, 60);
 
-        setTimeout(() => {
-          gameActive = false;
-        }, 15000);
-      }
+                if (Math.random() < 0.05)
+                    sticks.push({
+                        x: Math.random() * canvas.width,
+                        y: 0,
+                        rotation: Math.random() * Math.PI * 2,
+                        img: stickImages[Math.floor(Math.random() * stickImages.length)],
+                    });
 
-      startBtn.addEventListener("click", startCatcherGame);
-      document.addEventListener("mousemove", (e) => {
-        const rect = canvas.getBoundingClientRect();
-        catcher.x = e.clientX - rect.left - catcher.w / 2;
-      });
-      canvas.addEventListener("touchmove", (e) => {
-        const rect = canvas.getBoundingClientRect();
-        const touch = e.touches[0];
-        catcher.x = touch.clientX - rect.left - catcher.w / 2;
-      });
+                ctx.shadowColor = "rgba(0,0,0,0.1)";
+                ctx.shadowBlur = 3;
 
-      /* === Snack Memory === */
-      const memoryGrid = document.getElementById("memory-grid");
-      const restartMemory = document.getElementById("restartMemory");
-      const images = [
-        "images/garlic_burst.jpg",
-        "images/fiery_chilli.png",
-        "images/shio_nori.png",
-      ];
-      let cards = [],
-        flipped = [],
-        matched = 0;
+                sticks.forEach((s, i) => {
+                    s.y += 4;
 
-      function startMemoryGame() {
-        memoryGrid.innerHTML = "";
-        matched = 0;
-        const pairImages = [...images, ...images].sort(
-          () => Math.random() - 0.5
-        );
-        pairImages.forEach((img) => {
-          const card = document.createElement("div");
-          card.className =
-            "relative w-24 h-24 bg-yellow-200 rounded-lg shadow-md cursor-pointer flex items-center justify-center";
-          card.innerHTML = `
+                    // Tambah rotasi acak biar lebih natural
+                    if (!s.rotation) s.rotation = Math.random() * Math.PI * 2;
+                    s.rotation += 0.03;
+
+                    ctx.save();
+                    ctx.translate(s.x, s.y);
+                    ctx.rotate(s.rotation);
+                    ctx.scale(s.scale, s.scale);
+                    ctx.drawImage(s.img, -40, -40, 50, 50); // ukuran mangkuk pas
+                    ctx.restore();
+
+                    // Deteksi tabrakan
+                    if (
+                        s.y + 20 >= catcher.y &&
+                        s.x >= catcher.x - 30 &&
+                        s.x <= catcher.x + catcher.w + 70
+                    ) {
+                        sticks.splice(i, 1);
+                        score++;
+                        scoreDisplay.textContent = "Skor: " + score;
+                    }
+                });
+            }, 30);
+
+            setTimeout(() => {
+                gameActive = false;
+            }, 15000);
+        }
+
+        startBtn.addEventListener("click", startCatcherGame);
+        document.addEventListener("mousemove", (e) => {
+            const rect = canvas.getBoundingClientRect();
+            catcher.x = e.clientX - rect.left - catcher.w / 2;
+        });
+        canvas.addEventListener("touchmove", (e) => {
+            const rect = canvas.getBoundingClientRect();
+            const touch = e.touches[0];
+            catcher.x = touch.clientX - rect.left - catcher.w / 2;
+        });
+
+        /* === Snack Memory === */
+        const memoryGrid = document.getElementById("memory-grid");
+        const restartMemory = document.getElementById("restartMemory");
+        const images = [
+            "images/garlic_burst.jpg",
+            "images/fiery_chilli.png",
+            "images/shio_nori.png",
+        ];
+        let cards = [],
+            flipped = [],
+            matched = 0;
+
+        function startMemoryGame() {
+            memoryGrid.innerHTML = "";
+            matched = 0;
+            const pairImages = [...images, ...images].sort(
+                () => Math.random() - 0.5
+            );
+            pairImages.forEach((img) => {
+                const card = document.createElement("div");
+                card.className =
+                    "relative w-24 h-24 bg-yellow-200 rounded-lg shadow-md cursor-pointer flex items-center justify-center";
+                card.innerHTML = `
         <div class="front absolute inset-0 bg-yellow-400 rounded-lg"></div>
         <div class="back absolute inset-0 hidden"><img src="${img}" class="w-full h-full object-cover rounded-lg" /></div>
       `;
-          card.addEventListener("click", () => flipCard(card, img));
-          memoryGrid.appendChild(card);
-        });
-      }
-
-      function flipCard(card, img) {
-        const front = card.querySelector(".front");
-        const back = card.querySelector(".back");
-        if (flipped.length < 2 && !back.classList.contains("matched")) {
-          front.classList.add("hidden");
-          back.classList.remove("hidden");
-          flipped.push({ card, img });
+                card.addEventListener("click", () => flipCard(card, img));
+                memoryGrid.appendChild(card);
+            });
         }
 
-        if (flipped.length === 2) {
-          setTimeout(() => {
-            if (flipped[0].img === flipped[1].img) {
-              flipped.forEach((f) =>
-                f.card.querySelector(".back").classList.add("matched")
-              );
-              matched += 2;
-              if (matched === images.length * 2) {
-                alert("🎉 Kamu menang! Semua rasa cocok sempurna!");
-              }
-            } else {
-              flipped.forEach((f) => {
-                f.card.querySelector(".front").classList.remove("hidden");
-                f.card.querySelector(".back").classList.add("hidden");
-              });
+        function flipCard(card, img) {
+            const front = card.querySelector(".front");
+            const back = card.querySelector(".back");
+            if (flipped.length < 2 && !back.classList.contains("matched")) {
+                front.classList.add("hidden");
+                back.classList.remove("hidden");
+                flipped.push({
+                    card,
+                    img
+                });
             }
-            flipped = [];
-          }, 600);
-        }
-      }
 
-      restartMemory.addEventListener("click", startMemoryGame);
-      startMemoryGame();
+            if (flipped.length === 2) {
+                setTimeout(() => {
+                    if (flipped[0].img === flipped[1].img) {
+                        flipped.forEach((f) =>
+                            f.card.querySelector(".back").classList.add("matched")
+                        );
+                        matched += 2;
+                        if (matched === images.length * 2) {
+                            alert("🎉 Kamu menang! Semua rasa cocok sempurna!");
+                        }
+                    } else {
+                        flipped.forEach((f) => {
+                            f.card.querySelector(".front").classList.remove("hidden");
+                            f.card.querySelector(".back").classList.add("hidden");
+                        });
+                    }
+                    flipped = [];
+                }, 600);
+            }
+        }
+
+        restartMemory.addEventListener("click", startMemoryGame);
+        startMemoryGame();
     </script>
 
     <section id="community" class="py-24 overflow-hidden">
-      <h2 class="text-4xl font-bold text-center mb-12">#STIQSNaikKelas</h2>
+        <h2 class="text-4xl font-bold text-center mb-12">#STIQSNaikKelas</h2>
 
-      <div class="marquee">
-        <div class="marquee-content">
-          <img
-            src="images/carousel1.jpeg"
-            alt="STIQS community post 1"
-            class="marquee-item object-cover h-72 w-72 rounded-lg shadow-md"
-          />
-          <img
-            src="images/carousel2.jpeg"
-            alt="STIQS community post 2"
-            class="marquee-item object-cover h-72 w-72 rounded-lg shadow-md"
-          />
-          <img
-            src="images/carousel3.jpeg"
-            alt="STIQS community post 3"
-            class="marquee-item object-cover h-72 w-72 rounded-lg shadow-md"
-          />
-          <img
-            src="images/carousel1.jpeg"
-            alt="STIQS community post 1"
-            class="marquee-item object-cover h-72 w-72 rounded-lg shadow-md"
-          />
-          <img
-            src="images/carousel2.jpeg"
-            alt="STIQS community post 2"
-            class="marquee-item object-cover h-72 w-72 rounded-lg shadow-md"
-          />
-          <img
-            src="images/carousel3.jpeg"
-            alt="STIQS community post 3"
-            class="marquee-item object-cover h-72 w-72 rounded-lg shadow-md"
-          />
-          <img
-            src="images/carousel1.jpeg"
-            alt="STIQS community post 1"
-            class="marquee-item object-cover h-72 w-72 rounded-lg shadow-md"
-          />
-          <img
-            src="images/carousel2.jpeg"
-            alt="STIQS community post 2"
-            class="marquee-item object-cover h-72 w-72 rounded-lg shadow-md"
-          />
-          <img
-            src="images/carousel3.jpeg"
-            alt="STIQS community post 3"
-            class="marquee-item object-cover h-72 w-72 rounded-lg shadow-md"
-          />
-          <img
-            src="images/carousel1.jpeg"
-            alt="STIQS community post 1"
-            class="marquee-item object-cover h-72 w-72 rounded-lg shadow-md"
-          />
-          <img
-            src="images/carousel2.jpeg"
-            alt="STIQS community post 2"
-            class="marquee-item object-cover h-72 w-72 rounded-lg shadow-md"
-          />
-          <img
-            src="images/carousel3.jpeg"
-            alt="STIQS community post 3"
-            class="marquee-item object-cover h-72 w-72 rounded-lg shadow-md"
-          />
+        <div class="marquee">
+            <div class="marquee-content">
+                <img src="images/carousel1.jpeg" alt="STIQS community post 1" class="marquee-item object-cover h-72 w-72 rounded-lg shadow-md" />
+                <img src="images/carousel2.jpeg" alt="STIQS community post 2" class="marquee-item object-cover h-72 w-72 rounded-lg shadow-md" />
+                <img src="images/carousel3.jpeg" alt="STIQS community post 3" class="marquee-item object-cover h-72 w-72 rounded-lg shadow-md" />
+                <img src="images/carousel1.jpeg" alt="STIQS community post 1" class="marquee-item object-cover h-72 w-72 rounded-lg shadow-md" />
+                <img src="images/carousel2.jpeg" alt="STIQS community post 2" class="marquee-item object-cover h-72 w-72 rounded-lg shadow-md" />
+                <img src="images/carousel3.jpeg" alt="STIQS community post 3" class="marquee-item object-cover h-72 w-72 rounded-lg shadow-md" />
+                <img src="images/carousel1.jpeg" alt="STIQS community post 1" class="marquee-item object-cover h-72 w-72 rounded-lg shadow-md" />
+                <img src="images/carousel2.jpeg" alt="STIQS community post 2" class="marquee-item object-cover h-72 w-72 rounded-lg shadow-md" />
+                <img src="images/carousel3.jpeg" alt="STIQS community post 3" class="marquee-item object-cover h-72 w-72 rounded-lg shadow-md" />
+                <img src="images/carousel1.jpeg" alt="STIQS community post 1" class="marquee-item object-cover h-72 w-72 rounded-lg shadow-md" />
+                <img src="images/carousel2.jpeg" alt="STIQS community post 2" class="marquee-item object-cover h-72 w-72 rounded-lg shadow-md" />
+                <img src="images/carousel3.jpeg" alt="STIQS community post 3" class="marquee-item object-cover h-72 w-72 rounded-lg shadow-md" />
+            </div>
         </div>
-      </div>
     </section>
 
     <section id="faq" class="py-24 bg-white">
-      <div class="container mx-auto px-6 max-w-3xl">
-        <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">
-          Yang Sering Ditanyain
-        </h2>
+        <div class="container mx-auto px-6 max-w-3xl">
+            <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">
+                Yang Sering Ditanyain
+            </h2>
 
-        <div class="space-y-4">
-          <div
-            class="faq-item bg-gray-50 rounded-lg shadow-sm"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <button
-              class="faq-question w-full flex justify-between items-center text-left p-6"
-            >
+            <div class="space-y-4">
+                <div class="faq-item bg-gray-50 rounded-lg shadow-sm" data-aos="fade-up" data-aos-delay="100">
+                    <button class="faq-question w-full flex justify-between items-center text-left p-6">
               <span class="text-lg font-semibold text-gray-800"
                 >STIQS ini tahan berapa lama?</span
               >
@@ -751,23 +619,15 @@
                 ></path>
               </svg>
             </button>
-            <div class="faq-answer hidden p-6 pt-0 text-gray-600">
-              <p>
-                Karena kami zero-grease dan pakai kemasan ziplock kedap udara,
-                STIQS bisa tahan 2 minggu sampai 1 bulan di suhu ruangan. Tapi
-                biasanya sih 3 hari juga udah abis saking enaknya!
-              </p>
-            </div>
-          </div>
+                    <div class="faq-answer hidden p-6 pt-0 text-gray-600">
+                        <p>
+                            Karena kami zero-grease dan pakai kemasan ziplock kedap udara, STIQS bisa tahan 1 minggu sampai 3 minggu di suhu ruangan. Tapi biasanya sih 3 hari juga udah abis saking enaknya!
+                        </p>
+                    </div>
+                </div>
 
-          <div
-            class="faq-item bg-gray-50 rounded-lg shadow-sm"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <button
-              class="faq-question w-full flex justify-between items-center text-left p-6"
-            >
+                <div class="faq-item bg-gray-50 rounded-lg shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                    <button class="faq-question w-full flex justify-between items-center text-left p-6">
               <span class="text-lg font-semibold text-gray-800"
                 >Pengirimannya ke mana aja?</span
               >
@@ -786,342 +646,49 @@
                 ></path>
               </svg>
             </button>
-            <div class="faq-answer hidden p-6 pt-0 text-gray-600">
-              <p>
-                Saat ini, kami melayani pengiriman ke seluruh wilayah Pulau
-                Jawa. Untuk area yang masih dapat kami jangkau, pesanan akan
-                diantar langsung oleh tim STIQS. Sementara untuk wilayah di luar
-                jangkauan kami, pengiriman dilakukan melalui jasa ekspedisi yang
-                tersedia di daerah tersebut.
-              </p>
+                    <div class="faq-answer hidden p-6 pt-0 text-gray-600">
+                        <p>
+                            Saat ini, kami melayani pengiriman ke seluruh wilayah Pulau Jawa. Untuk area yang masih dapat kami jangkau, pesanan akan diantar langsung oleh tim STIQS. Sementara untuk wilayah di luar jangkauan kami, pengiriman dilakukan melalui jasa ekspedisi yang
+                            tersedia di daerah tersebut.
+                        </p>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </section>
 
-    <!-- ORDER FORM SECTION -->
-    <section id="order" class="py-24 bg-amber-50">
-      <div class="container mx-auto px-6 max-w-3xl">
-        <h2 class="text-4xl font-bold text-center mb-4 text-gray-800">
-          Order Now
-        </h2>
-        <p class="text-center text-gray-600 mb-10">
-          Isi form di bawah ini untuk memesan stik bawang favoritmu. Pesanan
-          akan langsung dikirim ke WhatsApp kami!
-        </p>
-
-        <form
-          id="orderForm"
-          class="bg-white shadow-xl rounded-2xl p-8 space-y-6"
-        >
-          <!-- Info -->
-          <div
-            class="bg-yellow-100 border-l-4 border-yellow-400 text-yellow-800 p-4 rounded-md"
-          >
-            <p class="text-sm">
-              <strong>Info:</strong> Setelah submit, Anda akan diarahkan ke
-              WhatsApp kami dengan detail pesanan otomatis. Tinggal klik kirim!
-            </p>
-          </div>
-
-          <!-- Nama & WhatsApp -->
-          <div class="grid md:grid-cols-2 gap-6">
-            <div>
-              <label class="block font-semibold mb-2 text-gray-700"
-                >Nama Lengkap <span class="text-red-500">*</span></label
-              >
-              <input
-                type="text"
-                id="name"
-                class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-yellow-400 focus:outline-none"
-                placeholder="Masukkan nama Anda"
-                required
-              />
-            </div>
-            <div>
-              <label class="block font-semibold mb-2 text-gray-700"
-                >Nomor WhatsApp <span class="text-red-500">*</span></label
-              >
-              <input
-                type="tel"
-                id="phone"
-                class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-yellow-400 focus:outline-none"
-                placeholder="08xxxxxxxxxx"
-                required
-              />
-            </div>
-          </div>
-
-          <!-- Pilihan Produk -->
-          <div>
-            <label class="block font-semibold mb-2 text-gray-700"
-              >Pilih Menu & Jumlah <span class="text-red-500">*</span></label
-            >
-
-            <div class="space-y-4">
-              <div
-                class="flex items-center justify-between bg-gray-50 p-4 rounded-lg border"
-              >
-                <div class="flex items-center gap-2">
-                  <input
-                    type="checkbox"
-                    id="garlic"
-                    data-name="Garlic Burst"
-                    data-price="10000"
-                    class="h-5 w-5 text-yellow-500"
-                  />
-                  <label for="garlic" class="font-medium"
-                    >Garlic Burst - Rp 10.000</label
-                  >
-                </div>
-                <input
-                  type="number"
-                  min="1"
-                  value="1"
-                  id="garlicQty"
-                  class="w-16 border border-gray-300 rounded-md text-center"
-                />
-              </div>
-
-              <div
-                class="flex items-center justify-between bg-gray-50 p-4 rounded-lg border"
-              >
-                <div class="flex items-center gap-2">
-                  <input
-                    type="checkbox"
-                    id="chilli"
-                    data-name="Fiery Chilli"
-                    data-price="11000"
-                    class="h-5 w-5 text-yellow-500"
-                  />
-                  <label for="chilli" class="font-medium"
-                    >Fiery Chilli - Rp 11.000</label
-                  >
-                </div>
-                <input
-                  type="number"
-                  min="1"
-                  value="1"
-                  id="chilliQty"
-                  class="w-16 border border-gray-300 rounded-md text-center"
-                />
-              </div>
-
-              <div
-                class="flex items-center justify-between bg-gray-50 p-4 rounded-lg border"
-              >
-                <div class="flex items-center gap-2">
-                  <input
-                    type="checkbox"
-                    id="shio"
-                    data-name="Shio Nori"
-                    data-price="11000"
-                    class="h-5 w-5 text-yellow-500"
-                  />
-                  <label for="shio" class="font-medium"
-                    >Shio Nori - Rp 11.000</label
-                  >
-                </div>
-                <input
-                  type="number"
-                  min="1"
-                  value="1"
-                  id="shioQty"
-                  class="w-16 border border-gray-300 rounded-md text-center"
-                />
-              </div>
-            </div>
-          </div>
-
-          <!-- Total -->
-          <div
-            class="bg-yellow-500 text-white text-lg font-bold text-center py-3 rounded-lg"
-          >
-            Total Harga: <span id="totalPrice">Rp 0</span>
-          </div>
-
-          <!-- Metode dan Alamat -->
-          <div>
-            <label class="block font-semibold mb-2 text-gray-700"
-              >Metode Pengiriman <span class="text-red-500">*</span></label
-            >
-            <select
-              id="delivery"
-              class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-yellow-400 focus:outline-none"
-            >
-              <option value="">-- Pilih Metode --</option>
-              <option value="Ambil di tempat">Ambil di tempat</option>
-              <option value="Delivery">Delivery</option>
-            </select>
-          </div>
-
-          <div>
-            <label class="block font-semibold mb-2 text-gray-700"
-              >Alamat Pengiriman</label
-            >
-            <input
-              type="text"
-              id="address"
-              class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-yellow-400 focus:outline-none"
-              placeholder="Isi jika pilih delivery"
-            />
-          </div>
-
-          <div>
-            <label class="block font-semibold mb-2 text-gray-700"
-              >Catatan Tambahan</label
-            >
-            <textarea
-              id="notes"
-              rows="3"
-              class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-yellow-400 focus:outline-none"
-              placeholder="Contoh: Tolong taruh di pagar dan beritahu jika sudah sampai, dll."
-            ></textarea>
-          </div>
-
-          <!-- Submit -->
-          <button
-            type="submit"
-            class="w-full bg-green-600 text-white font-semibold py-4 rounded-full flex items-center justify-center gap-3 hover:bg-green-500 transition-all"
-          >
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-              alt="WhatsApp Logo"
-              class="w-6 h-6"
-            />
-            Kirim Pesanan via WhatsApp
-          </button>
-        </form>
-      </div>
+    <section id="order-buttons" class="mb-6 px-6">
+        <div class="flex justify-center gap-4">
+            <a href="https://forms.gle/gvzNmVNKf7zgoarT6" target="_blank" class="bg-blue-600 text-white font-semibold flex items-center justify-center gap-3 p-3 rounded-lg hover:bg-blue-500 transition-all flex-1 max-w-xs text-center">
+            Kirim Pesanan via Google Form
+            </a>
+            <a href="https://wa.me/6281246027313" target="_blank" class="bg-green-600 text-white font-semibold flex items-center justify-center gap-3 p-3 rounded-lg hover:bg-green-500 transition-all flex-1 max-w-xs text-center">
+                 Chat Penjual
+            </a>
+        </div>
     </section>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const menuBtn = document.getElementById("menu-btn");
-        const closeBtn = document.getElementById("close-menu");
-        const menu = document.getElementById("menu");
-
-        menuBtn.addEventListener("click", () => {
-          menu.classList.remove("translate-x-full");
-        });
-
-        closeBtn.addEventListener("click", () => {
-          menu.classList.add("translate-x-full");
-        });
-      });
-    </script>
-
-    <script>
-      const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-      const totalPriceEl = document.getElementById("totalPrice");
-
-      checkboxes.forEach((box) => box.addEventListener("change", updateTotal));
-      document
-        .querySelectorAll('input[type="number"]')
-        .forEach((input) => input.addEventListener("input", updateTotal));
-
-      function updateTotal() {
-        let total = 0;
-        checkboxes.forEach((box) => {
-          if (box.checked) {
-            const qty =
-              parseInt(document.getElementById(box.id + "Qty").value) || 0;
-            const price = parseInt(box.dataset.price);
-            total += price * qty;
-          }
-        });
-        totalPriceEl.textContent = "Rp " + total.toLocaleString("id-ID");
-      }
-
-      document.getElementById("orderForm").addEventListener("submit", (e) => {
-        e.preventDefault();
-
-        const name = document.getElementById("name").value.trim();
-        const phone = document.getElementById("phone").value.trim();
-        const delivery = document.getElementById("delivery").value;
-        const address = document.getElementById("address").value.trim();
-        const notes = document.getElementById("notes").value.trim();
-
-        let orderDetails = "";
-        let total = 0;
-        let itemIndex = 1;
-
-        checkboxes.forEach((box) => {
-          if (box.checked) {
-            const qty = parseInt(document.getElementById(box.id + "Qty").value);
-            const price = parseInt(box.dataset.price);
-            const subtotal = qty * price;
-            total += subtotal;
-
-            orderDetails += `  ${itemIndex}. ${
-              box.dataset.name
-            }\n     ${qty}x @ Rp ${price.toLocaleString(
-              "id-ID"
-            )} = Rp ${subtotal.toLocaleString("id-ID")}\n`;
-            itemIndex++;
-          }
-        });
-
-        const totalText = "Rp " + total.toLocaleString("id-ID");
-
-        // format pesan WhatsApp
-        const message =
-          `Halo! Saya mau pesan STIQS\n\n` +
-          `*Detail Pesanan:*\n` +
-          `━━━━━━━━━━━━━━━━\n` +
-          `Nama: ${name}\n` +
-          `No. WhatsApp: ${phone}\n\n` +
-          `*Menu yang dipesan:*\n` +
-          `${orderDetails}\n` +
-          `*TOTAL: ${totalText}*\n\n` +
-          `Metode: ${delivery}${address ? `\nAlamat: ${address}` : ""}\n` +
-          `━━━━━━━━━━━━━━━━\n\n` +
-          `${notes ? `Catatan: ${notes}\n\n` : ""}` +
-          `Mohon konfirmasi pesanan saya. Terima kasih!`;
-
-        const whatsappNumber = "6281246027313"; // ubah ke nomor admin STIQS lo
-        const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-          message
-        )}`;
-
-        window.open(whatsappURL, "_blank");
-      });
-
-      // Logika dinamis untuk metode pengiriman
-      const deliverySelect = document.getElementById("delivery");
-      const addressField = document.getElementById("address");
-
-      deliverySelect.addEventListener("change", () => {
-        if (deliverySelect.value === "Ambil di tempat") {
-          addressField.value = "Pickup"; // otomatis isi tulisan Pickup
-          addressField.disabled = true; // nonaktifin input
-          addressField.classList.add(
-            "bg-gray-100",
-            "cursor-not-allowed",
-            "border-yellow-400",
-            "ring-1",
-            "ring-yellow-400"
-          );
-        } else {
-          addressField.value = "";
-          addressField.disabled = false;
-          addressField.classList.remove(
-            "bg-gray-100",
-            "cursor-not-allowed",
-            "border-yellow-400",
-            "ring-1",
-            "ring-yellow-400"
-          );
-        }
-      });
-    </script>
 
     <footer class="py-10 text-center">
-      <p class="text-gray-500">&copy; <a href="profile.html">2025 STIQS.</a></p>
+        <p class="text-gray-500">&copy; <a href="profile.html">2025 STIQS.</a></p>
     </footer>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const menuBtn = document.getElementById("menu-btn");
+            const closeBtn = document.getElementById("close-menu");
+            const menu = document.getElementById("menu");
+
+            menuBtn.addEventListener("click", () => {
+                menu.classList.remove("translate-x-full");
+            });
+
+            closeBtn.addEventListener("click", () => {
+                menu.classList.add("translate-x-full");
+            });
+        });
+    </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="app.js"></script>
-  </body>
+</body>
+
 </html>
